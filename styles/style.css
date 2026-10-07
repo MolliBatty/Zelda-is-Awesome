@@ -1,0 +1,16 @@
+body {
+	background: black;
+}
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90%;
+    min-height: 80vh;
+	margin: 0 auto;
+	background: url(../images/zelda_symbols.png);
+	background-color: #1f3d2b;
+	background-position: center;
+	background-size: 60vw;
+}
