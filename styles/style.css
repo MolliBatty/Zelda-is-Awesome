@@ -9,8 +9,7 @@ body {
 	width: 90%;
     min-height: 90vh;
 	margin: 0 auto;
-	background: url(../images/zelda_symbols.png);
+	background: url(../images/zelda_symbols.png) center;
 	background-color: #003300;
-	background-position: center;
 	background-size: 60vw;
 }
