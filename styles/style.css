@@ -1,3 +1,17 @@
+@font-face {
+	font-family: "Triforce";
+	src: url("/fonts/Triforce.ttf");
+}
+
+:root {
+	--main-color: #003300;
+	--secondary-color: #6b4f2a;
+	--accent-color: #c6a539;
+	--text-color: #ffffff;
+	--background-color: #000000;
+}
+
+
 body {
 	background: black;
 }
@@ -7,9 +21,94 @@ body {
 	flex-direction: column;
 	align-items: center;
 	width: 90%;
-    min-height: 90vh;
+	min-height: 90vh;
 	margin: 0 auto;
 	background: url(../images/zelda_symbols.png) center;
 	background-color: #003300;
 	background-size: 60vw;
+}
+
+header {
+	display: flex;
+	background: url(/images/header_background.png);
+	background-position: center 90%;
+	width: 100%;
+	height: 100px;
+	justify-content: center;
+	align-items: center;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+header h1 {
+	font-family: "Triforce", sans-serif;
+	color: var(--accent-color);
+	font-size: 3rem; 
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+	margin-top: 10%;
+	border-radius: 9px;
+	background-color: var(--accent-color);
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	box-shadow: 2px 2px 4px #000000;
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 700px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+	display: flex;
+	flex-flow: row wrap;
+
+}
+.dropdown:hover .dropbtn {
+	background-color: #3e8e41;
+}
+
+
+/* game-info */
+.game-info {
+	display: flex;
+	flex-flow: column wrap;
+	margin: 10%;
+	background: var(--accent-color);
+	height: 20%;
+	width: 80%;
+	color: var(--text-color);
+	padding: 5%;
+	text-align: center;
+}
+
+.game-info h2 {
+	font-family: "Triforce", sans-serif;
+	color: var(--secondary-color)
+}
+
+.game-info button{
+	background: var(--secondary-color);
+	color: var(--text-color);
+	border-radius: 7px;
+	box-shadow: 2px 2px 4px black;
 }
