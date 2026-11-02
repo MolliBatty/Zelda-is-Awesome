@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Details | Zelda is Awesome</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/webp" href="images/triforce.webp">
+    <script type="module" src="game.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div id="wrapper">
+        <header>
+            <img class="triforce-icon" src="images/triforce.webp" alt="" width="56" height="56">
+            <h1>Zelda is Awesome</h1>
+        </header>
+
+        <nav aria-label="Game menu">
+            <div class="dropdown">
+                <button class="dropbtn" id="dropbtn" type="button" aria-haspopup="true" aria-expanded="false"
+                    aria-controls="dropdown-content">Jump to a Game ▾</button>
+                <div class="dropdown-content" id="dropdown-content" hidden></div>
+            </div>
+        </nav>
+
+        <main id="main-content">
+            <section id="game-detail" class="panel" aria-live="polite" aria-labelledby="game-title">
+                <p class="status">Loading…</p>
+            </section>
+
+            <section id="reviews-section" class="panel" aria-labelledby="reviews-heading">
+                <h2 id="reviews-heading">Reviews</h2>
+                <p id="review-summary" class="meta" role="status"></p>
+
+                <form id="review-form" novalidate aria-labelledby="form-heading">
+                    <h3 id="form-heading">Write a review</h3>
+
+                    <div class="field">
+                        <label for="name">Your name</label>
+                        <input id="name" name="name" type="text" required minlength="2" maxlength="30"
+                            autocomplete="nickname" aria-describedby="name-error">
+                        <p class="field-error" id="name-error"></p>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="rating">Rating</label>
+                            <select id="rating" name="rating" required aria-describedby="rating-error">
+                                <option value="">Choose…</option>
+                                <option value="5">5 – Master Sword worthy</option>
+                                <option value="4">4 – Great</option>
+                                <option value="3">3 – Good</option>
+                                <option value="2">2 – Meh</option>
+                                <option value="1">1 – Ganon would be proud</option>
+                            </select>
+                            <p class="field-error" id="rating-error"></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="played">Date you played</label>
+                            <input id="played" name="played" type="date" required aria-describedby="played-error">
+                            <p class="field-error" id="played-error"></p>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="text">Your review</label>
+                        <textarea id="text" name="text" rows="5" required minlength="20" maxlength="500"
+                            aria-describedby="text-hint text-error"></textarea>
+                        <p class="hint" id="text-hint">20 to 500 characters. <span id="text-count">0 / 500</span></p>
+                        <p class="field-error" id="text-error"></p>
+                    </div>
+
+                    <div class="field field-check">
+                        <input id="recommend" name="recommend" type="checkbox">
+                        <label for="recommend">I'd recommend this game</label>
+                    </div>
+
+                    <button type="submit" class="btn">Save review</button>
+                    <p id="form-status" class="form-status" role="status"></p>
+                </form>
+
+                <ul id="reviews-list" class="reviews-list"></ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Reviews are saved in your browser only.
+                <a href="index.html">Back to all games</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
